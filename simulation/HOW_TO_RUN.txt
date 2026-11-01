@@ -1,0 +1,10 @@
+ModelSim testbenches used in chapter 4 of Project_Report.docx
+Run each from this folder in a ModelSim command prompt (P = ../designfile_testing):
+
+tb_sccb    : vlib work; vlog ../designfile_testing/ov7670_controller.v ../designfile_testing/ov7670_registers.v ../designfile_testing/i2c_sender.v tb_sccb.v; vsim -c work.tb_sccb -do "run -all; quit"
+tb_capture : vlib work; vlog ../designfile_testing/ov7670_capture.v tb_capture.v; vsim -c work.tb_capture -do "run -all; quit"
+tb_flash   : vlib work; vlog ../designfile_testing/flash_store.v tb_flash.v
+             vsim -c work.tb_flash -do "run 400ms; quit -f"            (run 1: save + erase, writes flash_after_save.hex)
+             vsim -c -gMODE=1 work.tb_flash -do "run 100ms; quit -f"   (run 2: power-on load of the saved data)
+tb_recog   : vlib work; vlog ../designfile_testing/face_recognizer.v ../designfile_testing/face_crop.v ../designfile_testing/lbp_uniform.v ../designfile_testing/dp_ram.v tb_recog.v
+             vsim -c -L altera_mf_ver work.tb_recog -do "run -all; quit"   (about 30 minutes; img.hex = built-in grey test image)
