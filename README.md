@@ -154,8 +154,8 @@ LBP face recognition, enrollment, flash storage, overlays and diagnostics.
 ## Team
 
 <!-- Replace with your names and registration numbers -->
-- Name 1 (Reg. No.)
-- Name 2 (Reg. No.)
+- Annet Maria Cyriac (26MVD0026)
+- Anita Paul Puthur (26MVD0032)
 - Name 3 (Reg. No.)
 
 Vellore Institute of Technology, School of Electronics Engineering, 2026-27.
